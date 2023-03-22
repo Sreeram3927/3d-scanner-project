@@ -1,7 +1,7 @@
-int a1 = 5;
-int a2 = 6;
-int b1 = 7;
-int b2 = 8;
+const int a1 = 5;
+const int a2 = 6;
+const int b1 = 7;
+const int b2 = 8;
 
 void setup() {
   pinMode(a1, OUTPUT);
@@ -17,27 +17,27 @@ void loop() {
   digitalWrite(b1, HIGH);
   digitalWrite(b2, LOW);
 
-  delay(100);
+  delay(10);
 
   digitalWrite(a1, LOW);
   digitalWrite(a2, HIGH);
   digitalWrite(b1, HIGH);
   digitalWrite(b2, LOW);
 
-  delay(100);
+  delay(10);
 
   digitalWrite(a1, LOW);
   digitalWrite(a2, HIGH);
   digitalWrite(b1, LOW);
   digitalWrite(b2, HIGH);
 
-  delay(100);
+  delay(10);
 
   digitalWrite(a1, HIGH);
   digitalWrite(a2, LOW);
   digitalWrite(b1, LOW);
   digitalWrite(b2, HIGH);
 
-  delay(100);
+  delay(10);
 
 }
