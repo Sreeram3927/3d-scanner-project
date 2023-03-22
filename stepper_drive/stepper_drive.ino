@@ -4,11 +4,12 @@ int b1 = 7;
 int b2 = 8;
 
 void setup() {
-  // put your setup code here, to run once:
-
+  pinMode(a1, OUTPUT);
+  pinMode(a2, OUTPUT);
+  pinMode(b1, OUTPUT);
+  pinMode(b2, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
 }
