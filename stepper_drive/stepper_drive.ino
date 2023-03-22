@@ -17,27 +17,55 @@ void loop() {
   digitalWrite(b1, HIGH);
   digitalWrite(b2, LOW);
 
-  delay(10);
+  delay(100);
+
+  digitalWrite(a1, LOW);
+  digitalWrite(a2, LOW);
+  digitalWrite(b1, HIGH);
+  digitalWrite(b2, LOW);
+
+  delay(100);
 
   digitalWrite(a1, LOW);
   digitalWrite(a2, HIGH);
   digitalWrite(b1, HIGH);
   digitalWrite(b2, LOW);
 
-  delay(10);
+  delay(100);
+
+  digitalWrite(a1, LOW);
+  digitalWrite(a2, HIGH);
+  digitalWrite(b1, LOW);
+  digitalWrite(b2, LOW);
+
+  delay(100);
 
   digitalWrite(a1, LOW);
   digitalWrite(a2, HIGH);
   digitalWrite(b1, LOW);
   digitalWrite(b2, HIGH);
 
-  delay(10);
+  delay(100);
+
+  digitalWrite(a1, LOW);
+  digitalWrite(a2, LOW);
+  digitalWrite(b1, LOW);
+  digitalWrite(b2, HIGH);
+
+  delay(100);  
 
   digitalWrite(a1, HIGH);
   digitalWrite(a2, LOW);
   digitalWrite(b1, LOW);
   digitalWrite(b2, HIGH);
 
-  delay(10);
+  delay(100);
+
+  digitalWrite(a1, HIGH);
+  digitalWrite(a2, LOW);
+  digitalWrite(b1, LOW);
+  digitalWrite(b2, LOW);
+
+  delay(100);
 
 }
