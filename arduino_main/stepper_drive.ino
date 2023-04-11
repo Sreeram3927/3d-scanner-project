@@ -3,7 +3,7 @@ const int a1 = 5;
 const int a2 = 6;
 const int b1 = 7;
 const int b2 = 8;
-const int d = 50;
+const int d = 3000;
 
 void stepperSetup() {
   
@@ -15,6 +15,8 @@ void stepperSetup() {
 }
 
 void stepperRun_HalfStep() {
+
+  stepperStep(1, 0, 0, 0);
     
   stepperStep(1, 0, 1, 0);
 
@@ -29,8 +31,6 @@ void stepperRun_HalfStep() {
   stepperStep(0, 0, 0, 1);
 
   stepperStep(1, 0, 0, 1);
-
-  stepperStep(1, 0, 0, 0);
   
 }
 
@@ -61,6 +61,6 @@ void stepperStep(int a, int a_, int b, int b_) {
   digitalWrite(b1, b);
   digitalWrite(b2, b_);
 
-  delay(d); 
+  delayMicroseconds(d); 
    
 }
