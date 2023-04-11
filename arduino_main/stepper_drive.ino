@@ -34,6 +34,26 @@ void stepperRun_HalfStep() {
   
 }
 
+void stepperRun_FullStep() {
+    
+  stepperStep(1, 0, 1, 0);
+
+//  stepperStep(0, 0, 1, 0);
+
+  stepperStep(0, 1, 1, 0);
+
+//  stepperStep(0, 1, 0, 0);
+
+  stepperStep(0, 1, 0, 1);
+
+//  stepperStep(0, 0, 0, 1);
+
+  stepperStep(1, 0, 0, 1);
+
+//  stepperStep(1, 0, 0, 0);
+  
+}
+
 void stepperStep(int a, int a_, int b, int b_) {
   
   digitalWrite(a1, a);
