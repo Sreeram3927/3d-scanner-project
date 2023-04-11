@@ -14,72 +14,33 @@ void stepperSetup() {
     
 }
 
-void stepperRun() {
+void stepperRun_HalfStep() {
     
-  digitalWrite(a1, HIGH);
-  digitalWrite(a2, LOW);
-  digitalWrite(b1, HIGH);
-  digitalWrite(b2, LOW);
+  stepperStep(1, 0, 1, 0);
 
-  delay(d);
+  stepperStep(0, 0, 1, 0);
 
-  digitalWrite(a1, LOW);
-  digitalWrite(a2, LOW);
-  digitalWrite(b1, HIGH);
-  digitalWrite(b2, LOW);
+  stepperStep(0, 1, 1, 0);
 
-  delay(d);
+  stepperStep(0, 1, 0, 0);
 
-  digitalWrite(a1, LOW);
-  digitalWrite(a2, HIGH);
-  digitalWrite(b1, HIGH);
-  digitalWrite(b2, LOW);
+  stepperStep(0, 1, 0, 1);
 
-  delay(d);
+  stepperStep(0, 0, 0, 1);
 
-  digitalWrite(a1, LOW);
-  digitalWrite(a2, HIGH);
-  digitalWrite(b1, LOW);
-  digitalWrite(b2, LOW);
+  stepperStep(1, 0, 0, 1);
 
-  delay(d);
-
-  digitalWrite(a1, LOW);
-  digitalWrite(a2, HIGH);
-  digitalWrite(b1, LOW);
-  digitalWrite(b2, HIGH);
-
-  delay(d);
-
-  digitalWrite(a1, LOW);
-  digitalWrite(a2, LOW);
-  digitalWrite(b1, LOW);
-  digitalWrite(b2, HIGH);
-
-  delay(d);  
-
-  digitalWrite(a1, HIGH);
-  digitalWrite(a2, LOW);
-  digitalWrite(b1, LOW);
-  digitalWrite(b2, HIGH);
-
-  delay(d);
-
-  digitalWrite(a1, HIGH);
-  digitalWrite(a2, LOW);
-  digitalWrite(b1, LOW);
-  digitalWrite(b2, LOW);
-
-  delay(d);
+  stepperStep(1, 0, 0, 0);
   
 }
 
 void stepperStep(int a, int a_, int b, int b_) {
-
+  
   digitalWrite(a1, a);
   digitalWrite(a2, a_);
   digitalWrite(b1, b);
   digitalWrite(b2, b_);
 
-  delay(d);  
+  delay(d); 
+   
 }
