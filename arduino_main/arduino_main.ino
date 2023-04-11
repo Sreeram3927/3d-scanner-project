@@ -5,4 +5,5 @@ void setup() {
 
 void loop() {
   stepperRun();
+  stepperStep(1, 0, 1, 0);
 }

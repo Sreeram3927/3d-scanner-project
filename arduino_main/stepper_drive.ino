@@ -73,3 +73,13 @@ void stepperRun() {
   delay(d);
   
 }
+
+void stepperStep(int a, int a_, int b, int b_) {
+
+  digitalWrite(a1, a);
+  digitalWrite(a2, a_);
+  digitalWrite(b1, b);
+  digitalWrite(b2, b_);
+
+  delay(d);  
+}
