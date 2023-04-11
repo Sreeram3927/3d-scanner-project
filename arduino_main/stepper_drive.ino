@@ -1,18 +1,21 @@
+
 const int a1 = 5;
 const int a2 = 6;
 const int b1 = 7;
 const int b2 = 8;
 const int d = 50;
 
-void setup() {
+void stepperSetup() {
+  
   pinMode(a1, OUTPUT);
   pinMode(a2, OUTPUT);
   pinMode(b1, OUTPUT);
   pinMode(b2, OUTPUT);
+    
 }
 
-void loop() {
-
+void stepperRun() {
+    
   digitalWrite(a1, HIGH);
   digitalWrite(a2, LOW);
   digitalWrite(b1, HIGH);
@@ -24,7 +27,7 @@ void loop() {
   digitalWrite(a2, LOW);
   digitalWrite(b1, HIGH);
   digitalWrite(b2, LOW);
-1010
+
   delay(d);
 
   digitalWrite(a1, LOW);
@@ -68,5 +71,5 @@ void loop() {
   digitalWrite(b2, LOW);
 
   delay(d);
-
+  
 }
