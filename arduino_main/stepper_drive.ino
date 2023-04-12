@@ -1,9 +1,5 @@
 
-const int a1 = 5;
-const int a2 = 6;
-const int b1 = 7;
-const int b2 = 8;
-const int d = 3000;
+const int delay = 3000;
 
 void stepperSetup() {
   
@@ -61,6 +57,6 @@ void stepperStep(int a, int a_, int b, int b_) {
   digitalWrite(b1, b);
   digitalWrite(b2, b_);
 
-  delayMicroseconds(d); 
+  delayMicroseconds(delay); 
    
 }
