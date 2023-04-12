@@ -4,7 +4,7 @@ void setup() {
 }
 
 void loop() {
-  stepperRun_HalfStep(20);
+  rotary_HalfStep(20);
   delay(2000);
   //stepperRun_FullStep();
 }

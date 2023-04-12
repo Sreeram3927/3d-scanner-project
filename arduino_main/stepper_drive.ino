@@ -11,50 +11,50 @@ float i;
     
 // }
 
-void stepperRun_HalfStep(int step) {
+// void stepperRun_HalfStep(int step) {
 
-  for(float i = 0.0; i <= step; ) {
-    stepperStep(1, 0, 0, 0);
-    i += 0.5;
-    stepperStep(1, 0, 1, 0);
-    i += 0.5;    
-    stepperStep(0, 0, 1, 0);
-    i += 0.5;
-    stepperStep(0, 1, 1, 0);
-    i += 0.5;
-    stepperStep(0, 1, 0, 0);
-    i += 0.5;
-    stepperStep(0, 1, 0, 1);
-    i += 0.5;
-    stepperStep(0, 0, 0, 1);
-    i += 0.5;
-    stepperStep(1, 0, 0, 1);
-    i += 0.5;
-  }
+//   for(float i = 0.0; i <= step; ) {
+//     stepperStep(1, 0, 0, 0);
+//     i += 0.5;
+//     stepperStep(1, 0, 1, 0);
+//     i += 0.5;    
+//     stepperStep(0, 0, 1, 0);
+//     i += 0.5;
+//     stepperStep(0, 1, 1, 0);
+//     i += 0.5;
+//     stepperStep(0, 1, 0, 0);
+//     i += 0.5;
+//     stepperStep(0, 1, 0, 1);
+//     i += 0.5;
+//     stepperStep(0, 0, 0, 1);
+//     i += 0.5;
+//     stepperStep(1, 0, 0, 1);
+//     i += 0.5;
+//   }
   
-}
+// }
 
-void stepperRun_FullStep() {
+// void stepperRun_FullStep() {
     
-  stepperStep(1, 0, 1, 0);
+//   stepperStep(1, 0, 1, 0);
 
-//  stepperStep(0, 0, 1, 0);
+// //  stepperStep(0, 0, 1, 0);
 
-  stepperStep(0, 1, 1, 0);
+//   stepperStep(0, 1, 1, 0);
 
-//  stepperStep(0, 1, 0, 0);
+// //  stepperStep(0, 1, 0, 0);
 
-  stepperStep(0, 1, 0, 1);
+//   stepperStep(0, 1, 0, 1);
 
-//  stepperStep(0, 0, 0, 1);
+// //  stepperStep(0, 0, 0, 1);
 
-  stepperStep(1, 0, 0, 1);
+//   stepperStep(1, 0, 0, 1);
 
-//  stepperStep(1, 0, 0, 0);
+// //  stepperStep(1, 0, 0, 0);
   
-}
+// }
 
-void stepperStep(int a, int a_, int b, int b_) {
+void stepperStep(int in1, int in2, int in3, int in4, int a, int a_, int b, int b_) {
   
   digitalWrite(in1, a);
   digitalWrite(in2, a_);
