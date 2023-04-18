@@ -3,7 +3,7 @@ const int r_in1 = 5;
 const int r_in2 = 6;
 const int r_in3 = 7;
 const int r_in4 = 8;
-static int r_pos = 0;
+int r_pos = 0;
 
 void rotaryTableSetup() {
 
@@ -14,7 +14,7 @@ void rotaryTableSetup() {
 
 }
 
-void rotary_HalfStep(float step) {
+void rotary_HalfStep(int step) {
 
   for(float i = 0.0; i <= step; ) {
     if (r_pos == 0) {

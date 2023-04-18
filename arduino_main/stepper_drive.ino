@@ -1,5 +1,5 @@
 
-const int d = 1000;
+const int d = 10;
 float i;
 
 // void stepperSetup() {
@@ -34,25 +34,25 @@ float i;
   
 // }
 
-// void stepperRun_FullStep() {
+void stepperRun_FullStep() {
     
-//   stepperStep(1, 0, 1, 0);
+  stepperStep(5, 6, 7, 8, 1, 0, 1, 0);
 
-// //  stepperStep(0, 0, 1, 0);
+//  stepperStep(5, 6, 7, 8, 0, 0, 1, 0);
 
-//   stepperStep(0, 1, 1, 0);
+  stepperStep(5, 6, 7, 8, 0, 1, 1, 0);
 
-// //  stepperStep(0, 1, 0, 0);
+//  stepperStep(5, 6, 7, 8, 0, 1, 0, 0);
 
-//   stepperStep(0, 1, 0, 1);
+  stepperStep(5, 6, 7, 8, 0, 1, 0, 1);
 
-// //  stepperStep(0, 0, 0, 1);
+//  stepperStep(5, 6, 7, 8, 0, 0, 0, 1);
 
-//   stepperStep(1, 0, 0, 1);
+  stepperStep(5, 6, 7, 8, 1, 0, 0, 1);
 
-// //  stepperStep(1, 0, 0, 0);
+//  stepperStep(5, 6, 7, 8, 1, 0, 0, 0);
   
-// }
+}
 
 void stepperStep(int in1, int in2, int in3, int in4, int a, int a_, int b, int b_) {
   
@@ -62,5 +62,6 @@ void stepperStep(int in1, int in2, int in3, int in4, int a, int a_, int b, int b
   digitalWrite(in4, b_);
 
   delayMicroseconds(d); 
-   
+  Serial.println(i, r_pos);
+
 }
