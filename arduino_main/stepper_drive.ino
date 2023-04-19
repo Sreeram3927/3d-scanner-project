@@ -38,19 +38,11 @@ void stepperRun_FullStep() {
     
   stepperStep(5, 6, 7, 8, 1, 0, 1, 0);
 
-//  stepperStep(5, 6, 7, 8, 0, 0, 1, 0);
-
   stepperStep(5, 6, 7, 8, 0, 1, 1, 0);
-
-//  stepperStep(5, 6, 7, 8, 0, 1, 0, 0);
 
   stepperStep(5, 6, 7, 8, 0, 1, 0, 1);
 
-//  stepperStep(5, 6, 7, 8, 0, 0, 0, 1);
-
   stepperStep(5, 6, 7, 8, 1, 0, 0, 1);
-
-//  stepperStep(5, 6, 7, 8, 1, 0, 0, 0);
   
 }
 
