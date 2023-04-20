@@ -14,42 +14,30 @@ void rotaryTableSetup() {
 
 }
 
-void rotary_HalfStep(int step) {
+void rotarySpin() {
 
-  for(float i = 0.0; i <= step; ) {
-    if (r_pos == 0) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 0);
-      i += 0.5;
-      r_pos = 1;
-    } else if (r_pos == 1) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 1, 0);
-      i += 0.5; 
-      r_pos = 2;   
-    } else if (r_pos == 2) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 0, 1, 0);
-      i += 0.5;
-      r_pos = 3;
-    } else if (r_pos == 3) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 1, 1, 0);
-      i += 0.5;
-      r_pos = 4;
-    } else if (r_pos == 4) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 1, 0, 0);
-      i += 0.5;
-      r_pos = 5;
-    } else if (r_pos == 5) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 1, 0, 1);
-      i += 0.5;
-      r_pos = 6;
-    } else if (r_pos == 6) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 0, 0, 1);
-      i += 0.5;
-      r_pos = 7;
-    } else if (r_pos == 7) {
-      stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 1);
-      i += 0.5;
-      r_pos = 0;
-    }
+  for(int i = 0; i <= 50; ) {
+
+    stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 0);
+    i++;
+
+    //stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 1, 0);
+
+    stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 0, 1, 0);
+    i++;
+
+    //stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 1, 1, 0);
+
+    stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 1, 0, 0);
+    i++;
+
+    //stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 1, 0, 1);
+
+    stepperStep(r_in1, r_in2, r_in3, r_in4, 0, 0, 0, 1);
+    i++;
+
+    //stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 1);
+
   }
   
 }
