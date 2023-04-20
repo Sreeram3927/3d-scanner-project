@@ -62,6 +62,6 @@ void stepperStep(int in1, int in2, int in3, int in4, int a, int a_, int b, int b
   digitalWrite(in4, b_);
 
   delayMicroseconds(d); 
-  Serial.println(i, r_pos);
+//  Serial.println(i, r_pos);
 
 }

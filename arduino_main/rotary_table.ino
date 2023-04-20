@@ -1,4 +1,3 @@
-
 const int r_in1 = 6;
 const int r_in2 = 7;
 const int r_in3 = 8;
@@ -38,5 +37,7 @@ void rotarySpin() {
     //stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 1);
 
   }
+
+  Serial.println("rotary table rotated");
   
 }

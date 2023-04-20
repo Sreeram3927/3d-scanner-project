@@ -8,5 +8,4 @@ void setup() {
 void loop() {
   irStep(10);
   rotarySpin();
-  delay(2000);
 }
