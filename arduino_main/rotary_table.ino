@@ -16,7 +16,7 @@ void rotaryTableSetup() {
 
 void rotarySpin() {
 
-  for(i = 0; i <= 200; ) {
+  for(i = 0; i < 200; ) {
 
     stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 0, rotaryDelay);
     i++;

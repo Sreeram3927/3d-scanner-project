@@ -1,5 +1,5 @@
-const int ir_in1 = 6;
-const int ir_in2 = 7;
+const int ir_in1 = 7;
+const int ir_in2 = 6;
 const int ir_in3 = 8;
 const int ir_in4 = 9;
 const int irDelay = 2;
