@@ -1,7 +1,8 @@
-const int r_in1 = 6;
-const int r_in2 = 7;
-const int r_in3 = 8;
-const int r_in4 = 9;
+const int r_in1 = 2;
+const int r_in2 = 3;
+const int r_in3 = 4;
+const int r_in4 = 5;
+int i;
 
 void rotaryTableSetup() {
 
@@ -14,7 +15,7 @@ void rotaryTableSetup() {
 
 void rotarySpin() {
 
-  for(int i = 0; i <= 50; ) {
+  for(i = 0; i <= 50; ) {
 
     stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 0);
     i++;
@@ -38,6 +39,7 @@ void rotarySpin() {
 
   }
 
-  Serial.println("rotary table rotated");
+  Serial.print("rotary table rotated");
+  Serial.println(i);
   
 }
