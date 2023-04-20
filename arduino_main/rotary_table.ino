@@ -3,7 +3,6 @@ const int r_in1 = 6;
 const int r_in2 = 7;
 const int r_in3 = 8;
 const int r_in4 = 9;
-int r_pos = 0;
 
 void rotaryTableSetup() {
 

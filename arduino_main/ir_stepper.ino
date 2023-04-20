@@ -14,7 +14,15 @@ void irStepperSetup() {
 }
 
 void irStep(int new_pos) {
-  for (int i = ir_pos; i <= new_pos;) {
+  for (int i = ir_pos; i <= new_pos; i++) {
+
+    stepperStep(ir_in1, ir_in2, ir_in3, ir_in4, 1, 0, 0, 0);
+
+    stepperStep(ir_in1, ir_in2, ir_in3, ir_in4, 0, 0, 1, 0);
+
+    stepperStep(ir_in1, ir_in2, ir_in3, ir_in4, 0, 1, 0, 0);
+
+    stepperStep(ir_in1, ir_in2, ir_in3, ir_in4, 0, 0, 0, 1);
     
   }
 }
