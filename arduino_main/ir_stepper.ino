@@ -1,5 +1,5 @@
-const int ir_in1 = 7;
-const int ir_in2 = 6;
+const int ir_in1 = 6;
+const int ir_in2 = 7;
 const int ir_in3 = 8;
 const int ir_in4 = 9;
 const int irDelay = 2;
@@ -14,7 +14,7 @@ void irStepperSetup() {
 
 }
 
-void irStep(int new_pos) {
+void irStepDown(int new_pos) {
   for (int i = ir_pos; i <= new_pos; i++) {
 
     stepperStep(ir_in1, ir_in2, ir_in3, ir_in4, 1, 0, 0, 0, irDelay);
@@ -26,5 +26,20 @@ void irStep(int new_pos) {
     stepperStep(ir_in1, ir_in2, ir_in3, ir_in4, 0, 0, 0, 1, irDelay);
     
   }
-  Serial.println("ir stepped");
+  //Serial.println("ir stepped");
+}
+
+void irStepUp(int new_pos) {
+  for (int i = ir_pos; i <= new_pos; i++) {
+
+    stepperStep(ir_in2, ir_in1, ir_in3, ir_in4, 1, 0, 0, 0, irDelay);
+
+    stepperStep(ir_in2, ir_in1, ir_in3, ir_in4, 0, 0, 1, 0, irDelay);
+
+    stepperStep(ir_in2, ir_in1, ir_in3, ir_in4, 0, 1, 0, 0, irDelay);
+
+    stepperStep(ir_in2, ir_in1, ir_in3, ir_in4, 0, 0, 0, 1, irDelay);
+    
+  }
+  //Serial.println("ir stepped");
 }

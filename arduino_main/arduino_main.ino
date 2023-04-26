@@ -8,11 +8,13 @@ void setup() {
 
 void loop() {
   //rotarySpin();
-  //irStep(50);
+  irStepDown(50);
   //delay(500);
   //rotarySpin();
   //stepperRun_FullStep(6, 7, 8, 9);
   //stepperRun_FullStep(2, 3, 4, 5);
-  sendInt(irRead());
+  //sendInt(serialRead());
+  delay(1000);
+  //irStepUp(50);
   delay(1000);
 }
