@@ -2,7 +2,7 @@ const int irPin = A0;
 float distance;
 
 void irSetup() {
-  pinMode(irPin, OUTPUT);
+  pinMode(irPin, INPUT);
 }
 
 float irRead() {
