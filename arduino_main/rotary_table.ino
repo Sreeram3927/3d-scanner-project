@@ -3,6 +3,7 @@ const int r_in2 = 3;
 const int r_in3 = 4;
 const int r_in4 = 5;
 const int rotaryDelay = 5;
+const int rotaryLimit = 200;
 int i;
 
 void rotaryTableSetup() {
@@ -32,7 +33,12 @@ void rotarySpin() {
 
   }
 
-  Serial.print("rotary table rotated: ");
-  Serial.println(i);
+  // Serial.print("rotary table rotated: ");
+  // Serial.println(i);
   
+}
+
+
+void scanObject() {
+
 }

@@ -1,7 +1,7 @@
 
 void startScan() {
 
-  //irStepUp(500);
+  scanObject();
 
   
 }
