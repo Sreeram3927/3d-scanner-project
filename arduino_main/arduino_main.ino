@@ -1,10 +1,13 @@
 
 void setup() {
-  pinMode(13, INPUT);
   rotaryTableSetup();
   irStepperSetup();
   irSetup();
+  limitSwitchSetup();
   serialSetup();
+
+  irStepperStartup();
+
 }
 
 void loop() {
@@ -18,7 +21,7 @@ void loop() {
   //delay(1000);
   //irStepUp(50);
   //irStepperStartup();
-  startup();
+  //startup();
   delay(1000);
   //startup();
 }

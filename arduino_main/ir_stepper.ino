@@ -3,7 +3,9 @@ const int ir_in2 = 7;
 const int ir_in3 = 8;
 const int ir_in4 = 9;
 const int irDelay = 2;
-int ir_pos = 0;
+const int limitSwitch = 13;
+
+static int ir_pos;
 int t = 0;
 
 void irStepperSetup() {
@@ -30,7 +32,7 @@ void irStepDown(int new_pos) {
 }
 
 void irStepUp(int new_pos) {
-  for (int i = ir_pos; i <= new_pos; i++) {
+  for (int i = ir_pos; i >= new_pos; i--) {
 
     stepperStep(ir_in2, ir_in1, ir_in3, ir_in4, 1, 0, 0, 0, irDelay);
 
@@ -43,8 +45,18 @@ void irStepUp(int new_pos) {
   }
 }
 
+
+void limitSwitchSetup() {
+  pinMode(limitSwitch, INPUT_PULLUP);
+}
+
 void irStepperStartup() {
   while (1) {
-    irStepUp(50);
+    if (digitalRead(limitSwitch) == LOW) {
+      irStepUp(10);
+    } else {
+      ir_pos = 0;
+      break;
+    }
   }
 }

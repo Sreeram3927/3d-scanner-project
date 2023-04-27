@@ -1,13 +1,17 @@
-const int limitSwitch = 13;
-int switchStatus = 0;
-void startup() {
-  if (digitalRead(13) == LOW) {
-    in = 0;
-    sendInt(222);
-  }
+// const int limitSwitch = 13;
+// int switchStatus = 0;
 
-  if (in == 1) {
-    sendInt(1);
-  }
-  
-}
+// void limitSwitchSetup() {
+//   pinMode(limitSwitch, INPUT_PULLUP);
+// }
+
+// void irStepperStartup() {
+//   while (1) {
+//     if (digitalRead(limitSwitch) == LOW) {
+//       irStepUp(10);
+//     } else {
+//       ir_pos = 0;
+//       break;
+//     }
+//   }
+// }
