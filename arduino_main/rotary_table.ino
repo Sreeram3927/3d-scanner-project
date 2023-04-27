@@ -15,9 +15,9 @@ void rotaryTableSetup() {
 
 }
 
-void rotarySpin() {
+void rotarySpin(int newPos) {
 
-  for(i = 0; i < 200; ) {
+  for(i = 0; i < newPos; ) {
 
     stepperStep(r_in1, r_in2, r_in3, r_in4, 1, 0, 0, 0, rotaryDelay);
     i++;
@@ -38,7 +38,3 @@ void rotarySpin() {
   
 }
 
-
-void scanObject() {
-
-}

@@ -5,7 +5,7 @@ const int ir_in4 = 9;
 const int irDelay = 2;
 const int limitSwitch = 13;
 
-static int ir_pos;
+int ir_pos = 0;
 
 void irStepperSetup() {
 
@@ -31,7 +31,7 @@ void irStepDown(int new_pos) {
 }
 
 void irStepUp(int new_pos) {
-  for (int i = ir_pos; i >= new_pos; i--) {
+  for (int i = ir_pos; i <= new_pos; i++) {
 
     stepperStep(ir_in2, ir_in1, ir_in3, ir_in4, 1, 0, 0, 0, irDelay);
 
@@ -51,7 +51,7 @@ void limitSwitchSetup() {
 
 void irStepperStartup() {
   while (1) {
-    if (digitalRead(limitSwitch) == LOW) {
+    if (digitalRead(limitSwitch) == HIGH) {
       irStepDown(10);
     } else {
       ir_pos = 0;
