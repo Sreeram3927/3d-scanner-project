@@ -1,4 +1,5 @@
-int in = 0;
+const int limitSwitch = 13;
+int switchStatus = 0;
 void startup() {
   if (digitalRead(13) == LOW) {
     in = 0;
