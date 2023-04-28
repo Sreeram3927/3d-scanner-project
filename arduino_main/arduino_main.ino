@@ -7,7 +7,7 @@ void setup() {
   serialSetup();
 
   irStepperStartup();
-
+  delay(1000);
 }
 
 void loop() {
@@ -19,7 +19,7 @@ void loop() {
   //stepperRun_FullStep(2, 3, 4, 5);
   //sendInt(serialRead());
   //delay(1000);
-  irStepUp(50);
+  irStepUp(10);
   //irStepperStartup();
   //startup();
   delay(1000);
