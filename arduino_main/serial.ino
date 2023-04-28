@@ -9,8 +9,10 @@ void sendInt(int data) {
 
 int serialRead() {
   if (Serial.available() > 0) {
-    int data = Serial.read();
-    return data;
+    int data = Serial.parseInt();
+    if (Serial.read() == '\n') {
+      return data;
+    }
   }
 }
 

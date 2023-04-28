@@ -24,8 +24,8 @@ void startScan() {
     irStepUp(10);
   }
 
-  for (int j = 0; i < 70; j++) {
-    for (int k = 0; k < 40; j++) {
+  for (int j = 0; j < 70; j++) {
+    for (int k = 0; k < 40; k++) {
       Serial.print(fullScan[j][k]);
       Serial.print(" ");
     }

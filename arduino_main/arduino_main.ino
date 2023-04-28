@@ -24,4 +24,10 @@ void loop() {
   //startScan();
   delay(1000);
   //startup();
+
+  if (3 == serialRead()) {
+    Serial.println("got it");
+  } else {
+    Serial.println("nope");
+  }
 }
