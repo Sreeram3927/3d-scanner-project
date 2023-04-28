@@ -11,7 +11,7 @@ void setup() {
 }
 
 void loop() {
-  //rotarySpin();
+  rotarySpin(200);
   //irStepDown(50);
   //delay(500);
   //rotarySpin(5);
@@ -21,7 +21,7 @@ void loop() {
   //delay(1000);
   //irStepUp(10);
   //irStepperStartup();
-  startScan();
+  //startScan();
   delay(1000);
   //startup();
 }

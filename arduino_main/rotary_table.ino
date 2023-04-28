@@ -2,7 +2,7 @@ const int r_in1 = 2;
 const int r_in2 = 3;
 const int r_in3 = 4;
 const int r_in4 = 5;
-const int rotaryDelay = 5;
+const int rotaryDelay = 7;
 const int rotaryLimit = 200;
 int i;
 

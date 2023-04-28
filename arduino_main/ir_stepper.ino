@@ -47,8 +47,8 @@ void irStepUp(int new_pos) {
     
     }
     curStep += new_pos;
-    Serial.print("step = ");
-    Serial.println(curStep);
+    // Serial.print("step = ");
+    // Serial.println(curStep);
   } else {
     Serial.println("Maxlimit Reached");
   }
