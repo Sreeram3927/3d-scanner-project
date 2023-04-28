@@ -1,4 +1,6 @@
 
+int flag = 0;
+
 void setup() {
   rotaryTableSetup();
   irStepperSetup();
@@ -26,8 +28,13 @@ void loop() {
   //startup();
 
   if (3 == serialRead()) {
-    Serial.println("got it");
+    if (flag == 0) {
+      //Serial.println("got it");
+      startScan();
+      flag = 1;
+    } else {}
   } else {
-    Serial.println("nope");
+    //Serial.println("nope");
+    flag = 0;
   }
 }
