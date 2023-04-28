@@ -11,7 +11,7 @@ void setup() {
 }
 
 void loop() {
-  rotarySpin(200);
+  //rotarySpin(200);
   //irStepDown(50);
   //delay(500);
   //rotarySpin(5);
