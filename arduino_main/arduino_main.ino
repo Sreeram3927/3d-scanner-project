@@ -27,14 +27,20 @@ void loop() {
   delay(1000);
   //startup();
 
-  if (3 == serialRead()) {
-    if (flag == 0) {
-      //Serial.println("got it");
-      startScan();
-      flag = 1;
-    } else {}
-  } else {
-    //Serial.println("nope");
-    flag = 0;
+  // if (3 == serialRead()) {
+  //   if (flag == 0) {
+  //     //Serial.println("got it");
+      // startScan();
+  //     flag = 1;
+  //   } else {}
+  // } else {
+  //   //Serial.println("nope");
+  //   flag = 0;
+  // }
+
+  if (flag == 0) {
+    startScan();
+    flag = 1;
   }
+
 }

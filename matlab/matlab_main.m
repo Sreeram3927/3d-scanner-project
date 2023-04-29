@@ -5,7 +5,7 @@ cmd = 'n';
 arduino = serialport(port, baudrate);
 fopen(arduino);
 
-scanData = zeros(70, 40, 'int16');
+scanData = zeros(70, 40, 'uint16');
 
 cmd = input('Enter command: ', 's');
 
@@ -15,8 +15,8 @@ while cmd ~= 'x'
         flush(arduino);
         for i = 1:5
             %while arduino.NumBytesAvailable < 80; end
-            recieved_data = read(arduino, 40, 'int16');
-            scanData(i, :) = recieved_data;
+            recieved_data = fscanf(arduino, 40, 'uint16');
+            scanData(i, :) = recieved_data';
         end
         cmd = 'n';
         disp(scanData);
@@ -25,4 +25,4 @@ while cmd ~= 'x'
 end
 
 fclose(arduino);
-delete(arduino)
+delete(arduino);
