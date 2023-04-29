@@ -19,7 +19,7 @@ void scanObject(int irPos) {
 
 void startScan() {
 
-  for (int i = 0; i < 70; i++) {
+  for (int i = 0; i < 5; i++) {
     scanObject(i);
     irStepUp(10);
   }
