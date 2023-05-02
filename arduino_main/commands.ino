@@ -1,6 +1,6 @@
 
-int scanData[40];
-int fullScan[70][40];
+int scanData[25];
+//int fullScan[70][40];
 
 void scanObject(int irPos) {
 
@@ -9,7 +9,7 @@ void scanObject(int irPos) {
     scanData[z] = irRead();
   }
 
-  for (int z = 0; z <= 40; z++) {
+  for (int z = 0; z < 25; z++) {
     Serial.print(scanData[z]);
     Serial.print(" ");
   }
