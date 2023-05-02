@@ -24,7 +24,7 @@ void loop() {
   //irStepUp(10);
   //irStepperStartup();
   //startScan();
-  delay(1000);
+  //delay(1000);
   //startup();
 
   // if (3 == serialRead()) {
