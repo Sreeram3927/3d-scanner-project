@@ -4,7 +4,7 @@ int fullScan[70][40];
 
 void scanObject(int irPos) {
 
-  for (int z = 0; z < 40; z++) {
+  for (int z = 0; z < 25; z++) {
     rotarySpin(5);
     scanData[z] = irRead();
   }

@@ -10,9 +10,9 @@ scanData = zeros(70, 40, 'uint16');
 
 for i = 1:5
  %   while arduino.NumBytesAvailable == 80; end
-    recieved_data = fscanf(arduino, );
+    recieved_data = fscanf(arduino, '%d');
     scanData(i, :) = recieved_data(1:40);
-  disp(recieved_data);
+  %disp(recieved_data);
 end
 
 disp(scanData);

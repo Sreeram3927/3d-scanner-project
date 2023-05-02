@@ -1,5 +1,6 @@
 
 int flag = 0;
+//int p;
 
 void setup() {
   rotaryTableSetup();
@@ -19,7 +20,8 @@ void loop() {
   //rotarySpin(5);
   //stepperRun_FullStep(6, 7, 8, 9);
   //stepperRun_FullStep(2, 3, 4, 5);
-  //sendInt(serialRead());
+  //sendInt(p);
+  //p++;
   //delay(1000);
   //irStepUp(10);
   //irStepperStartup();
