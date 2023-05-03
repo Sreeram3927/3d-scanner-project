@@ -1,31 +1,30 @@
 port = 'COM3';
 baudrate = 9600;
-%cmd = 'n';
 
 arduino = serial(port, 'baudrate', baudrate);
 arduino.Timeout = 10;
 fopen(arduino);
 
-scanData = zeros(70, 25, 'uint16');
+coordX = zeros(70, 25);
+coordY = zeros(70, 25);
+coordZ = zeros(70, 25);
 
 for i = 1:70
- %   while arduino.NumBytesAvailable == 80; end
-    recieved_data = fscanf(arduino, '%d');
-    scanData(i, :) = recieved_data(1:25);
-  %disp(recieved_data);
+    for j = 1:25
+        recieved_data = fscanf(arduino, '%f');
+        coordX(i, j) = recieved_data(1);
+        coordY(i, j) = recieved_data(2);
+        coordZ(i, j) = recieved_data(3);
+    end
 end
 
-disp(scanData);
+%disp(scanData);
 
 fclose(arduino);
 delete(arduino);
 
 
-
-coordX = zeros(70, 25);
-coordY = zeros(70, 25);
-coordZ = zeros(70, 25);
-
+%{
 angle = 14.4;
 
 for i = 1:70
@@ -41,3 +40,4 @@ end
 
 ptCloud = pointCloud([coordX(:), coordY(:), coordZ(:)]);
 pcshow(ptCloud);
+%}
