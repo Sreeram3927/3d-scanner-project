@@ -7,7 +7,7 @@ void setup() {
   irStepperSetup();
   irSetup();
   limitSwitchSetup();
-  serialSetup();
+  Serial.begin(9600);
 
   irStepperStartup();
   delay(1000);
