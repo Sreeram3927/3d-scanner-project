@@ -26,7 +26,6 @@ depthData = zeros(70, 25, 2, 'uint16');
 
 for i = 1:70
     for j = 1:25
-        coordXY = ()
         depthData(i, j) = 
     end
 end
