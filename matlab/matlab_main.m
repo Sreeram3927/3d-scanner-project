@@ -32,6 +32,8 @@ for i = 1:70
     for j = 1:25
         curAngle = j * angle;
         netDist = 18 - scanData(i, j);
-        %x(i, j) = 
+        coordX(i, j) = (netDist * sin(curAngle));
+        coordY(i, j) = (netDist * cos(curAngle));
+        coordZ(i, j) = (i * 0.179);
     end
 end

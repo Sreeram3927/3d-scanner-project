@@ -42,6 +42,8 @@ void loop() {
 
   if (flag == 0) {
     startScan();
+    //delay(3000);
+    //irStepUp(10);
     flag = 1;
   }
 
