@@ -1,9 +1,12 @@
 
-//int scanData[25];
 int depthInfo;
 int netDist;
 double coordX, coordY, coordZ;
 double angle = 14.4, curAngle;
+
+void sendData(x, y, z) {
+  
+}
 
 void scanObject(int irPos) {
 
@@ -18,19 +21,8 @@ void scanObject(int irPos) {
     coordY = (netDist * cos(curAngle * (3.14 / 180)));
     coordZ = irPos * 0.18;
 
-    Serial.print(coordX);
-    Serial.print(" ");
-    Serial.print(coordY);
-    Serial.print(" ");
-    Serial.println(coordZ);
-  }
 
-  // for (int i = 0; i < 25; i++) {
-  //   netDist = 18 - scanData[]
-  //   // Serial.print(scanData[z]);
-  //   // Serial.print(" ");
-  // }
-  // Serial.println("");
+  }
 
 }
 

@@ -9,7 +9,7 @@ coordX = zeros(70, 25);
 coordY = zeros(70, 25);
 coordZ = zeros(70, 25);
 
-for i = 1:70
+for i = 1:60
     for j = 1:25
         recieved_data = fscanf(arduino, '%f');
         coordX(i, j) = recieved_data(1);

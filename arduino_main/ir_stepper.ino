@@ -6,7 +6,6 @@ const int irDelay = 2;
 const int limitSwitch = 13;
 const int maxLimit = 700;
 
-//int ir_pos;
 int curStep = 0;
 
 void irStepperSetup() {
@@ -71,7 +70,6 @@ void irStepperStartup() {
     if (digitalRead(limitSwitch) == HIGH) {
       irStepDown(10);
     } else {
-      //ir_pos = 0;
       stopIrStepper();
       break;
     }

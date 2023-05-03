@@ -1,6 +1,5 @@
 
 int flag = 0;
-//int p;
 
 void setup() {
   rotaryTableSetup();
@@ -42,8 +41,6 @@ void loop() {
 
   if (flag == 0) {
     startScan();
-    //delay(3000);
-    //irStepUp(10);
     flag = 1;
   } else {
     stopIrStepper();
