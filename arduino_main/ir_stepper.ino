@@ -54,6 +54,13 @@ void irStepUp(int new_pos) {
   }
 }
 
+void stopIrStepper() {
+  digitalWrite(ir_in1, LOW);
+  digitalWrite(ir_in2, LOW);
+  digitalWrite(ir_in3, LOW);
+  digitalWrite(ir_in4, LOW);
+}
+
 
 void limitSwitchSetup() {
   pinMode(limitSwitch, INPUT_PULLUP);
@@ -65,6 +72,7 @@ void irStepperStartup() {
       irStepDown(10);
     } else {
       //ir_pos = 0;
+      stopIrStepper();
       break;
     }
   }

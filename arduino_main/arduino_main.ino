@@ -45,6 +45,9 @@ void loop() {
     //delay(3000);
     //irStepUp(10);
     flag = 1;
+  } else {
+    stopIrStepper();
+    stopRotary();
   }
 
 }

@@ -2,7 +2,7 @@ port = 'COM3';
 baudrate = 9600;
 %cmd = 'n';
 
-arduino = serial(port, baudrate);
+arduino = serial(port, 'baudrate', baudrate);
 arduino.Timeout = 10;
 fopen(arduino);
 
@@ -26,14 +26,18 @@ coordX = zeros(70, 25);
 coordY = zeros(70, 25);
 coordZ = zeros(70, 25);
 
-angle = deg2rad(14.4);
+angle = 14.4;
 
 for i = 1:70
     for j = 1:25
-        curAngle = j * angle;
+        curAngle = deg2rad(j * angle);
         netDist = 18 - scanData(i, j);
         coordX(i, j) = (netDist * sin(curAngle));
         coordY(i, j) = (netDist * cos(curAngle));
-        coordZ(i, j) = (i * 0.179);
+        coordZ(i, j) = (i * 0.18);
     end
 end
+
+
+ptCloud = pointCloud([coordX(:), coordY(:), coordZ(:)]);
+pcshow(ptCloud);

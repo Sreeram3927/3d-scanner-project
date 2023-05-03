@@ -37,3 +37,10 @@ void rotarySpin(int newPos) {
   
 }
 
+void stopRotary() {
+  digitalWrite(r_in1, LOW);
+  digitalWrite(r_in2, LOW);
+  digitalWrite(r_in3, LOW);
+  digitalWrite(r_in4, LOW);
+}
+
