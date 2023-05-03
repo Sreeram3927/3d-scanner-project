@@ -22,10 +22,16 @@ delete(arduino);
 
 
 
-depthData = zeros(70, 25, 2, 'uint16');
+coordX = zeros(70, 25);
+coordY = zeros(70, 25);
+coordZ = zeros(70, 25);
+
+angle = deg2rad(14.4);
 
 for i = 1:70
     for j = 1:25
-        depthData(i, j) = 
+        curAngle = j * angle;
+        coordXY = (scanData(i, j) * sin(curAngle), scanData(i, j) * cos(curAngle));
+        %depthData(i, j) = 
     end
 end
