@@ -4,8 +4,12 @@ int netDist;
 double coordX, coordY, coordZ;
 double angle = 14.4, curAngle;
 
-void sendData(x, y, z) {
-  
+void sendData(double x, double y, double z) {
+  Serial.print(x);
+  Serial.print(" ");
+  Serial.print(y);
+  Serial.print(" ");
+  Serial.println(z);
 }
 
 void scanObject(int irPos) {
@@ -21,7 +25,7 @@ void scanObject(int irPos) {
     coordY = (netDist * cos(curAngle * (3.14 / 180)));
     coordZ = irPos * 0.18;
 
-
+    sendData(coordX, coordY, coordZ);
   }
 
 }

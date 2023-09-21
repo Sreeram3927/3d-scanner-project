@@ -24,20 +24,6 @@ fclose(arduino);
 delete(arduino);
 
 
-%{
-angle = 14.4;
-
-for i = 1:70
-    for j = 1:25
-        curAngle = deg2rad(j * angle);
-        netDist = 18 - scanData(i, j);
-        coordX(i, j) = (netDist * sin(curAngle));
-        coordY(i, j) = (netDist * cos(curAngle));
-        coordZ(i, j) = (i * 0.18);
-    end
-end
-
-
 ptCloud = pointCloud([coordX(:), coordY(:), coordZ(:)]);
 pcshow(ptCloud);
-%}
+
